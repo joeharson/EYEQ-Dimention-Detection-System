@@ -1,0 +1,9 @@
+import cv2
+
+aruco_dict = cv2.aruco.getPredefinedDictionary(cv2.aruco.DICT_6X6_250)
+marker_id = 0
+marker_size = 400  # make it big for easy detection
+
+marker_img = cv2.aruco.generateImageMarker(aruco_dict, marker_id, marker_size)
+cv2.imwrite("aruco_marker_50mm.png", marker_img)
+print("✅ Marker saved as aruco_marker_50mm.png — print it at 50 mm width.")
