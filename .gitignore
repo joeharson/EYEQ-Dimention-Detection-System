@@ -1,0 +1,28 @@
+# ===== Python =====
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# ===== Virtual environments =====
+venv/
+.env/
+
+# ===== ML / Vision =====
+*.pt
+*.onnx
+*.engine
+
+# ===== Outputs / Runtime files =====
+*.csv
+*.log
+current_measurement.txt
+measurements.json
+
+# ===== Calibration / Cache =====
+*.pkl
+*.npy
+
+# ===== OS =====
+.DS_Store
+Thumbs.db

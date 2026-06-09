@@ -1,0 +1,27 @@
+import ezdxf
+
+# Create DXF document
+doc = ezdxf.new(setup=True)
+doc.units = ezdxf.units.MM
+msp = doc.modelspace()
+
+# Ball bearing dimensions (mm)
+OUTER_DIAMETER = 30.0
+INNER_DIAMETER = 13.0
+
+# Draw outer circle
+msp.add_circle(
+    center=(0, 0),
+    radius=OUTER_DIAMETER / 2
+)
+
+# Draw inner circle
+msp.add_circle(
+    center=(0, 0),
+    radius=INNER_DIAMETER / 2
+)
+
+# Save file
+doc.saveas("ball_bearing.dxf")
+
+print("ball_bearing.dxf created successfully")
